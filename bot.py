@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import sqlite3
 import asyncio
+import os
 from datetime import datetime, timedelta
 
 intents = discord.Intents.default()
@@ -447,4 +448,4 @@ async def endevent_error(ctx, error):
         await ctx.send("❌ Ye command sirf admins use kar sakte hain.")
 
 
-bot.run("YOUR_BOT_TOKEN")
+bot.run(os.environ["BOT_TOKEN"])
